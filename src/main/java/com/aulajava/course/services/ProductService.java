@@ -1,0 +1,28 @@
+package com.aulajava.course.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.aulajava.course.entities.Product;
+import com.aulajava.course.entities.User;
+import com.aulajava.course.repositories.ProductRepository;
+import com.aulajava.course.repositories.UserRepository;
+
+@Service
+public class ProductService {
+
+	@Autowired
+	private ProductRepository repository;
+	
+	public List<Product> findAll(){
+		return repository.findAll();
+	}
+	
+	public Product findById(Long id) {
+		Optional<Product> obj = repository.findById(id);
+		return obj.get();
+	}
+}

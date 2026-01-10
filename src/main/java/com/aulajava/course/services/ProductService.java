@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.aulajava.course.entities.Product;
-import com.aulajava.course.entities.User;
 import com.aulajava.course.repositories.ProductRepository;
-import com.aulajava.course.repositories.UserRepository;
 
 @Service
 public class ProductService {
